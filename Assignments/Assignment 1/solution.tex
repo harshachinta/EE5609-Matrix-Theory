@@ -1,1 +1,113 @@
 
+
+%\documentclass[12pt]{article}
+\documentclass[12pt]{scrartcl}
+\title{EE5609 Matrix Theory - Assignment 1}
+\nonstopmode
+%\usepackage[utf-8]{inputenc}
+\usepackage{graphicx} % Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    % For tables and other floats
+\usepackage{verbatim} % For comments and other
+\usepackage{amsmath}  % For math
+\usepackage{amssymb}  % For more math
+\usepackage{fullpage} % Set margins and place page numbers at bottom center
+\usepackage{paralist} % paragraph spacing
+\usepackage{listings} % For source code
+\usepackage{subfig}   % For subfigures
+%\usepackage{physics}  % for simplified dv, and 
+\usepackage{enumitem} % useful for itemization
+\usepackage{siunitx}  % standardization of si units
+
+\usepackage{tikz,bm} % Useful for drawing plots
+%\usepackage{tikz-3dplot}
+\usepackage{circuitikz}
+
+%%% Colours used in field vectors and propagation direction
+\definecolor{mycolor}{rgb}{1,0.2,0.3}
+\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
+\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+\definecolor{darkelectricblue}{rgb}{0.33, 0.41, 0.47}
+\definecolor{darkpowderblue}{rgb}{0.0, 0.2, 0.6}
+\definecolor{darktangerine}{rgb}{1.0, 0.66, 0.07}
+\definecolor{emerald}{rgb}{0.31, 0.78, 0.47}
+\definecolor{palatinatepurple}{rgb}{0.41, 0.16, 0.38}
+\definecolor{pastelviolet}{rgb}{0.8, 0.6, 0.79}
+\begin{document}
+
+\begin{center}
+	\hrule
+	\vspace{.4cm}
+	{\textbf { \large  Matrix Theory - Assignment 1}}
+\end{center}
+{ \textbf{Name:}} \ Sri Harsha CH \hspace{\fill} \textbf{Roll No:} AI20MTECH14007 \\
+	\hrule
+
+\paragraph*{Problem 1:} %\hfill \newline
+ Write down a unit vector in the $xy$\nobreakdash-plane, making an angle of $30^{\circ}$ with the positive direction of the $x$-axis ?
+
+
+\paragraph*{Solution: } %\hfill \newline
+ Let us consider a unit vector $\vec{a}$ in the $xy$\nobreakdash-plane.
+ Since the vector lies in $xy$\nobreakdash-plane, any vector in this plane is formed by linear combination of $\hat{i}$ (unit vector in direction of $x$-axis) and $\hat{j}$ (unit vector in direction of $y$-axis). 
+ \newline 
+ This can be written in the form of equation as below:
+ \begin{align*}
+& \vec{a}  = x\hat{i} + y\hat{j}\\
+\end{align*}
+
+We know from question that $\vec{a}$ makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis.
+Similarly, as $x$ and $y$ axis are perpendicular to each other, we can also infer that $\vec{a}$ makes an angle of $60^{\circ}$ with the positive direction of the $y$-axis.
+\newline
+\newline
+From the definition of dot product we know that,
+ \begin{align*}
+& \vec{a} \cdot \vec{b}  = \lvert \vec{a} \rvert \lvert \vec{b} \rvert \cos{\theta}\\
+\end{align*}
+
+\begin{enumerate}[label=(\alph*)]
+\item As $\vec{a}$ makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis, let us substitute $\vec{a}$ = $\vec{a}$, $\vec{b}$ = $\hat{i}$ (unit vector along $x$ axis) and $\theta$ = $30^{\circ}$  . 
+\newline 
+ \begin{align*}
+& \vec{a} \cdot \hat{i}  = \lvert \vec{a} \rvert \lvert \hat{i} \rvert \cos{30^{\circ}}\\
+\end{align*}
+As $\vec{a}$ and $\vec{i}$ are unit vectors, their magnitude is $1$. Therefore,
+ \begin{align*}
+& \vec{a} \cdot \hat{i}  = 1 \times 1 \times \frac{\sqrt{3}}{2}\\
+&\therefore \vec{a} \cdot \hat{i}  = \frac{\sqrt{3}}{2}\\
+\end{align*}
+Substituting, $\vec{a}$ from above,
+\begin{align*}
+& \left (x\hat{i} + y\hat{j} \right) \cdot \hat{i} = \frac{\sqrt{3}}{2}\\
+& \implies \boxed{x = \frac{\sqrt{3}}{2}}\\
+\end{align*}
+
+
+\item Similarly, as $\vec{a}$ makes an angle of $60^{\circ}$ with the positive direction of the $y$-axis, let us substitute $\vec{a}$ = $\vec{a}$, $\vec{b}$ = $\hat{j}$ (unit vector along $y$ axis) and $\theta$ = $60^{\circ}$  . 
+\newline 
+ \begin{align*}
+& \vec{a} \cdot \hat{j}  = \lvert \vec{a} \rvert \lvert \hat{j} \rvert \cos{60^{\circ}}\\
+\end{align*}
+As $\vec{a}$ and $\vec{j}$ are unit vectors, their magnitude is $1$. Therefore,
+ \begin{align*}
+& \vec{a} \cdot \hat{j}  = 1 \times 1 \times \frac{1}{2}\\
+&\therefore \vec{a} \cdot \hat{j}  = \frac{1}{2}\\
+\end{align*}
+Substituting, $\vec{a}$ from above,
+\begin{align*}
+& \left (x\hat{i} + y\hat{j} \right) \cdot \hat{j} = \frac{1}{2}\\
+& \implies \boxed{y = \frac{1}{2}}\\
+\end{align*}
+\end{enumerate}
+
+As,  $\vec{a}$  = x$\hat{i}$ + y$\hat{j}$\\
+Substituting x and y from above, we get\\
+\begin{align*}
+&\implies \boxed{\vec{a}  = \frac{\sqrt{3}}{2}\hat{i} + \frac{1}{2}\hat{j}}\\
+\end{align*}
+This $\vec{a}$ is the unit vector that makes an angle of $30^{\circ}$ with the positive $x$ axis. 
+
+
+\end{document}
