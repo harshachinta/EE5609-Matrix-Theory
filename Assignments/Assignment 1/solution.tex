@@ -1,5 +1,3 @@
-
-
 %\documentclass[12pt]{article}
 \documentclass[12pt]{scrartcl}
 \title{EE5609 Matrix Theory - Assignment 1}
@@ -50,64 +48,35 @@
 
 
 \paragraph*{Solution: } %\hfill \newline
- Let us consider a unit vector $\vec{a}$ in the $xy$\nobreakdash-plane.
- Since the vector lies in $xy$\nobreakdash-plane, any vector in this plane is formed by linear combination of $\hat{i}$ (unit vector in direction of $x$-axis) and $\hat{j}$ (unit vector in direction of $y$-axis). 
- \newline 
- This can be written in the form of equation as below:
+ Let us consider a unit vector $\vec{a}$ in the $xy$\nobreakdash-plane, and given this vector makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis.\\
+ With the angle given, we can find out the slope $m$ and using this slope we can find the direction vector.\\
+ The slope($m$) is given by:\\
  \begin{align*}
-& \vec{a}  = x\hat{i} + y\hat{j}\\
+& m = \tan{\theta}\\ 
 \end{align*}
-
-We know from question that $\vec{a}$ makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis.
-Similarly, as $x$ and $y$ axis are perpendicular to each other, we can also infer that $\vec{a}$ makes an angle of $60^{\circ}$ with the positive direction of the $y$-axis.
-\newline
-\newline
-From the definition of dot product we know that,
+ and the direction vector is obtained from slope as:\\
  \begin{align*}
-& \vec{a} \cdot \vec{b}  = \lvert \vec{a} \rvert \lvert \vec{b} \rvert \cos{\theta}\\
+& \begin{pmatrix} 1 \\ m \end{pmatrix}
 \end{align*}
-
-\begin{enumerate}[label=(\alph*)]
-\item As $\vec{a}$ makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis, let us substitute $\vec{a}$ = $\vec{a}$, $\vec{b}$ = $\hat{i}$ (unit vector along $x$ axis) and $\theta$ = $30^{\circ}$  . 
-\newline 
+Substituting $\theta$ = $30^{\circ}$ in slope equation, we get:
  \begin{align*}
-& \vec{a} \cdot \hat{i}  = \lvert \vec{a} \rvert \lvert \hat{i} \rvert \cos{30^{\circ}}\\
+& m = \tan{30^{\circ}} = \frac{1}{\sqrt{3}}\\ 
 \end{align*}
-As $\vec{a}$ and $\vec{i}$ are unit vectors, their magnitude is $1$. Therefore,
+and the direction vector is:
  \begin{align*}
-& \vec{a} \cdot \hat{i}  = 1 \times 1 \times \frac{\sqrt{3}}{2}\\
-&\therefore \vec{a} \cdot \hat{i}  = \frac{\sqrt{3}}{2}\\
-\end{align*}
-Substituting, $\vec{a}$ from above,
-\begin{align*}
-& \left (x\hat{i} + y\hat{j} \right) \cdot \hat{i} = \frac{\sqrt{3}}{2}\\
-& \implies \boxed{x = \frac{\sqrt{3}}{2}}\\
+& \vec{a}  = \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix}
 \end{align*}
 
-
-\item Similarly, as $\vec{a}$ makes an angle of $60^{\circ}$ with the positive direction of the $y$-axis, let us substitute $\vec{a}$ = $\vec{a}$, $\vec{b}$ = $\hat{j}$ (unit vector along $y$ axis) and $\theta$ = $60^{\circ}$  . 
-\newline 
+To find a unit vector with the same direction as direction vector, we divide by the magnitude of the vector.
  \begin{align*}
-& \vec{a} \cdot \hat{j}  = \lvert \vec{a} \rvert \lvert \hat{j} \rvert \cos{60^{\circ}}\\
+& \hat{a}  = \frac{\vec{a}}{\lvert \vec{a} \rvert}\\
+& \lvert \vec{a} \rvert  = \sqrt{ \left( 1 \right)^{\!\!2} +  \left( \frac{1}{\sqrt{3}} \right)^{\!\!2}} = \frac{2}{\sqrt{3}}
 \end{align*}
-As $\vec{a}$ and $\vec{j}$ are unit vectors, their magnitude is $1$. Therefore,
+
+$\implies$ The unit vector is given by:
  \begin{align*}
-& \vec{a} \cdot \hat{j}  = 1 \times 1 \times \frac{1}{2}\\
-&\therefore \vec{a} \cdot \hat{j}  = \frac{1}{2}\\
+& \hat{a}  = \begin{pmatrix} \frac{1}{\frac{2}{\sqrt{3}}} \\ \frac{\frac{1}{\sqrt{3}}}{\frac{2}{\sqrt{3}}} \end{pmatrix}\\
+& \hat{a}  = \begin{pmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix}\\
+& \implies \boxed{\hat{a}  = \begin{pmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix}}\\
 \end{align*}
-Substituting, $\vec{a}$ from above,
-\begin{align*}
-& \left (x\hat{i} + y\hat{j} \right) \cdot \hat{j} = \frac{1}{2}\\
-& \implies \boxed{y = \frac{1}{2}}\\
-\end{align*}
-\end{enumerate}
-
-As,  $\vec{a}$  = x$\hat{i}$ + y$\hat{j}$\\
-Substituting x and y from above, we get\\
-\begin{align*}
-&\implies \boxed{\vec{a}  = \frac{\sqrt{3}}{2}\hat{i} + \frac{1}{2}\hat{j}}\\
-\end{align*}
-This $\vec{a}$ is the unit vector that makes an angle of $30^{\circ}$ with the positive $x$ axis. 
-
-
 \end{document}
