@@ -1,64 +1,169 @@
-%\documentclass[12pt]{article}
-\documentclass[12pt]{scrartcl}
-\title{EE5609 Matrix Theory - Assignment 1}
-\nonstopmode
-%\usepackage[utf-8]{inputenc}
-\usepackage{graphicx} % Required for including pictures
-\usepackage[figurename=Figure]{caption}
-\usepackage{float}    % For tables and other floats
-\usepackage{verbatim} % For comments and other
-\usepackage{amsmath}  % For math
-\usepackage{amssymb}  % For more math
-\usepackage{fullpage} % Set margins and place page numbers at bottom center
-\usepackage{paralist} % paragraph spacing
-\usepackage{listings} % For source code
-\usepackage{subfig}   % For subfigures
-%\usepackage{physics}  % for simplified dv, and 
-\usepackage{enumitem} % useful for itemization
-\usepackage{siunitx}  % standardization of si units
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
 
-\usepackage{tikz,bm} % Useful for drawing plots
-%\usepackage{tikz-3dplot}
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
 \usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
 
-%%% Colours used in field vectors and propagation direction
-\definecolor{mycolor}{rgb}{1,0.2,0.3}
-\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
-\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
-\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
-\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
-\definecolor{darkelectricblue}{rgb}{0.33, 0.41, 0.47}
-\definecolor{darkpowderblue}{rgb}{0.0, 0.2, 0.6}
-\definecolor{darktangerine}{rgb}{1.0, 0.66, 0.07}
-\definecolor{emerald}{rgb}{0.31, 0.78, 0.47}
-\definecolor{palatinatepurple}{rgb}{0.41, 0.16, 0.38}
-\definecolor{pastelviolet}{rgb}{0.8, 0.6, 0.79}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
 \begin{document}
 
-\begin{center}
-	\hrule
-	\vspace{.4cm}
-	{\textbf { \large  Matrix Theory - Assignment 1}}
-\end{center}
-{ \textbf{Name:}} \ Sri Harsha CH \hspace{\fill} \textbf{Roll No:} AI20MTECH14007 \\
-	\hrule
 
-\paragraph*{Problem 1:} %\hfill \newline
- Write down a unit vector in the $xy$\nobreakdash-plane, making an angle of $30^{\circ}$ with the positive direction of the $x$-axis ?
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
 
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
 
-\paragraph*{Solution: } %\hfill \newline
- Let us consider a unit vector $\vec{a}$ in the $xy$\nobreakdash-plane, and given this vector makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis.\\
- With the angle given, we can find out the slope $m$ and using this slope we can find the direction vector.\\
- The slope($m$) is given by:\\
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 1}
+\author{Sri Harsha CH}
+
+\maketitle
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document explains the concept of finding the unit vector making an angle of $\theta$ with the positive direction of the $x$ axis.
+\end{abstract}
+\section{Problem}
+
+Write down a unit vector in the $xy$\nobreakdash-plane, making an angle of $30^{\circ}$ with the positive direction of the $x$-axis.
+\section{Explanation}
+Unit vector can be found from direction vector which depends on the slope.
+The slope($m$) is given by:\\
  \begin{align*}
 & m = \tan{\theta}\\ 
 \end{align*}
  and the direction vector is obtained from slope as:\\
  \begin{align*}
-& \begin{pmatrix} 1 \\ m \end{pmatrix}
+& \myvec{
+1\\
+m
+}
 \end{align*}
+The direction vector of $x$ axis is given by \myvec{
+1\\
+0
+} as the slope ($m$) of $x$ axis is zero.\\
+Now, let us consider a unit vector $\vec{a}$ in the $xy$\nobreakdash-plane, and given this vector makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis.\\
 Substituting $\theta$ = $30^{\circ}$ in slope equation, we get:
+
  \begin{align*}
 & m = \tan{30^{\circ}} = \frac{1}{\sqrt{3}}\\ 
 \end{align*}
@@ -67,16 +172,39 @@ and the direction vector is:
 & \vec{a}  = \begin{pmatrix} 1 \\ \frac{1}{\sqrt{3}} \end{pmatrix}
 \end{align*}
 
+
+\\
+
+
 To find a unit vector with the same direction as direction vector, we divide by the magnitude of the vector.
  \begin{align*}
 & \hat{a}  = \frac{\vec{a}}{\lvert \vec{a} \rvert}\\
 & \lvert \vec{a} \rvert  = \sqrt{ \left( 1 \right)^{\!\!2} +  \left( \frac{1}{\sqrt{3}} \right)^{\!\!2}} = \frac{2}{\sqrt{3}}
 \end{align*}
-
+\\
 $\implies$ The unit vector is given by:
  \begin{align*}
-& \hat{a}  = \begin{pmatrix} \frac{1}{\frac{2}{\sqrt{3}}} \\ \frac{\frac{1}{\sqrt{3}}}{\frac{2}{\sqrt{3}}} \end{pmatrix}\\
-& \hat{a}  = \begin{pmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix}\\
-& \implies \boxed{\hat{a}  = \begin{pmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{pmatrix}}\\
+ & \hat{a}  = \myvec{
+\frac{1}{\frac{2}{\sqrt{3}}}\\
+\frac{\frac{1}{\sqrt{3}}}{\frac{2}{\sqrt{3}}}
+}\\
+& \hat{a}  = \myvec{
+\frac{\sqrt{3}}{2}\\
+\frac{1}{2}
+}\\
+& \implies \boxed{\hat{a}  = \myvec{
+\frac{\sqrt{3}}{2}\\
+\frac{1}{2}
+}}\\
 \end{align*}
-\end{document}
+
+\section{Solution}
+
+The unit vector that makes an angle of $30^{\circ}$ with the positive direction of the $x$-axis is:
+\begin{align*}
+& \implies \boxed{\hat{a}  = \myvec{
+\frac{\sqrt{3}}{2}\\
+\frac{1}{2}
+}}\\
+\end{align*}
+\\\end{document}
