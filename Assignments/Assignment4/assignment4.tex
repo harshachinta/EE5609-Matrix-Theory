@@ -1,0 +1,204 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 4}
+\author{Sri Harsha CH}
+
+\maketitle
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document explains the concept of computing the determinant of a matrix given.
+\end{abstract}
+
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/harshachinta/EE5609-Matrix-Theory/tree/master/Assignments/Assignment4/code
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/harshachinta/EE5609-Matrix-Theory/tree/master/Assignments/Assignment4
+\end{lstlisting}
+%
+\section{Problem}
+If $a,b$ and $c$ are real numbers, and\\
+$\triangle = \mydet{b+c & c+a & a+b\\c+a & a+b & b+c\\a+b&b+c & c+a} =0$, \\Show that either $a+b+c =0$ or $a=b=c$.
+\section{Explanation}
+Given,\\
+\begin{align}
+&\triangle = \mydet{b+c & c+a & a+b\\c+a & a+b & b+c\\a+b&b+c & c+a} =0\label{eq:ques}
+\end{align}
+let us perform column operation on equation \eqref{eq:ques}:\\
+$C_1 \rightarrow C_1+C_2+C_3$
+\begin{align}
+&\mydet{2(a+b+c) & c+a & a+b\\2(a+b+c) & a+b & b+c\\2(a+b+c)&b+c & c+a} =0 \label{eq:eq_1}
+\end{align}
+Taking 2$(a+b+c)$ common from $C_1$ in \eqref{eq:eq_1},\\
+\begin{align}
+&2(a+b+c)\mydet{1 & c+a & a+b\\1 & a+b & b+c\\1&b+c & c+a} =0 \label{eq:eq_2}
+\end{align}
+Let us  perform row operations on equation \eqref{eq:eq_2},
+$R_1 \rightarrow R_1-R_2, R_2 \rightarrow R_2-R_3$
+\begin{align}
+&2(a+b+c)\mydet{0 & c-b & a-c\\0 & a-c & b-a\\1&b+c & c+a} =0 \label{eq:equ_3}
+\end{align}\\
+On expanding determinant along first column from equation \eqref{eq:equ_3},
+\begin{align}
+&2(a+b+c)[(c-b)(b-a)-(a-c)^{2}]=0\\
+&\implies 2(a+b+c)(a^{2}+b^{2}+c^{2}-ab-bc-ca)=0 \\
+&\implies (a+b+c)(2a^{2}+2b^{2}+2c^{2}-2ab-2bc-2ca)=0\\
+&\implies (a+b+c)[(a-b)^{2}+(b-c)^{2}+(c-a)^{2}] = 0 \label{eq:equ_4}
+\end{align}
+From equation \eqref{eq:equ_4} we get 2 equations,
+\begin{align}
+&\implies \boxed{(a+b+c) = 0} \label{eq:sol_1}
+\end{align}
+or,
+\begin{align}
+&\implies (a-b)^{2}+(b-c)^{2}+(c-a)^{2} = 0 \label{eq:sol_2}
+\end{align}
+Equation \eqref{eq:sol_2} is possible only when, $a=b=c$
+\begin{align}
+&\implies \boxed{a=b=c} \label{eq:sol_3}
+\end{align}
+From equation \eqref{eq:sol_1} and \eqref{eq:sol_3} we can say that,
+$\triangle=0$ if $a+b+c=0$ or $a=b=c$.
+\section{Solution}
+
+From equation \eqref{eq:sol_1} and \eqref{eq:sol_3} we can say that,
+$\triangle=0$ if $a+b+c=0$ or $a=b=c$.
+
+\\\end{document}
