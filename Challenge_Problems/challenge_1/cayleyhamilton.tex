@@ -176,18 +176,23 @@ From equation \eqref{eq:adj_2} we already know RHS, but we need to determine LHS
 From RHS of \eqref{eq:adj_2},we know that,
 $adj(\vec{A}-\lambda\vec{I})$ has a polynomial of degree $n-1$.\\
 \begin{align} 
-& adj(\vec{A}-\lambda\vec{I}) = b_0 + b_1\lambda + b_2\lambda^{2} +  \cdots+b_{n-1}\lambda^{n-1}\label{eq:adj_3}\\
-& (\vec{A}-\lambda\vec{I}) adj(\vec{A}-\lambda\vec{I}) \\&= (\vec{A}-\lambda\vec{I})(b_0 + b_1\lambda + b_2\lambda^{2} +  \cdots+b_{n-1}\lambda^{n-1})\\
-&= \vec{A}b_0 + \vec{A}b_1\lambda +\cdots+ \vec{A}b_{n-1}\lambda^{n-1}- b_0\lambda\\ 
-&    - b_1\lambda^{2}-\cdots - b_{n-1}\lambda^{n}\\
-&=\vec{A}b_0 + \lambda(\vec{A}b_1 - b_0) + \lambda^{2}(\vec{A}b_2 - b_1) + \cdots - b_{n-1}\lambda^{n}  \label{eq:adj_4}
+& adj(\vec{A}-\lambda\vec{I}) = b_0 + b_1\lambda + b_2\lambda^{2} +  \cdots+b_{n-1}\lambda^{n-1}\label{eq:adj_3}
 \end{align}
+Using equation \eqref{eq:adj_3},
+\begin{multline}
+ (\vec{A}-\lambda\vec{I}) adj(\vec{A}-\lambda\vec{I}) \\= (\vec{A}-\lambda\vec{I})(b_0 + b_1\lambda + b_2\lambda^{2} +  \cdots+b_{n-1}\lambda^{n-1})\\
+\end{multline}
+\begin{multline}
+= \vec{A}b_0 + \vec{A}b_1\lambda +\cdots+ \vec{A}b_{n-1}\lambda^{n-1}\\
+- b_0\lambda - b_1\lambda^{2}-\cdots - b_{n-1}\lambda^{n}\\
+=\vec{A}b_0 + \lambda(\vec{A}b_1 - b_0) + \lambda^{2}(\vec{A}b_2 - b_1) + \cdots - b_{n-1}\lambda^{n}  \label{eq:adj_4}
+\end{multline}
 Substituting equ \eqref{eq:adj_4} and \eqref{eq:char_eq}  in \eqref{eq:adj_2},
-\begin{align*} 
-&\vec{A}b_0 + \lambda(\vec{A}b_1 - b_0) + \lambda^{2}(\vec{A}b_2 - b_1) + \cdots - b_{n-1}\lambda^{n} =\\
-&a_0 + a_1\lambda + a_2\lambda^{2} +  \cdots+a_n\lambda^{n}
-\end{align*}
-Comparing coefficients of equal powers of $\lambda$,
+\begin{multline} \label{eq:comp}
+\vec{A}b_0 + \lambda(\vec{A}b_1 - b_0) + \lambda^{2}(\vec{A}b_2 - b_1) + \cdots - b_{n-1}\lambda^{n} =\\
+a_0 + a_1\lambda + a_2\lambda^{2} +  \cdots+a_n\lambda^{n}
+\end{multline}
+Comparing coefficients of equal powers of $\lambda$ in equation \eqref{eq:comp},
 \begin{align}
 & \vec{A}b_0 = a_0 \label{eq:eq1}\\
 & \vec{A}b_1 - b_0 = a_1 \label{eq:eq2}\\
@@ -210,5 +215,4 @@ Adding all the equations above, we get:
 \section{Solution}
 
 Equation \eqref{eq:final} proves Cayley-Hamilton theorem.
-
 \\\end{document}
