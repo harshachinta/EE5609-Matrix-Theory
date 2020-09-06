@@ -195,20 +195,28 @@ a_0 + a_1\lambda + a_2\lambda^{2} +  \cdots+a_n\lambda^{n}
 Comparing coefficients of equal powers of $\lambda$ in equation \eqref{eq:comp},
 \begin{align}
 & \vec{A}b_0 = a_0 \label{eq:eq1}\\
-& \vec{A}b_1 - b_0 = a_1 \label{eq:eq2}\\
-& \vdots \\
+& \vec{A}b_1 - b_0 = a_1 \label{eq:eq2}
+\end{align}
+\begin{align*}
+ \vdots
+\end{align*}
+\begin{align}
 & \vec{A}b_{n-1} - b_{n-2} = a_{n-1} \label{eq:eq3}\\
 & -b_{n-1} = a_n \label{eq:eq4}
 \end{align}
 Multiplying equ \eqref{eq:eq1} by $\vec{I}$, equ \eqref{eq:eq2} by $\vec{A}$, $\cdots$,  \eqref{eq:eq3} by $\vec{A^{n-1}}$ and  \eqref{eq:eq4} by $\vec{A^{n}}$, we get,
 \begin{align}
 & \vec{A}b_0 = a_0\vec{I} \label{eq:eq5}\\
-& \vec{A^{2}}b_1 - \vec{A}b_0 = \vec{A}a_1 \label{eq:eq6}\\
-& \vdots \\
+& \vec{A^{2}}b_1 - \vec{A}b_0 = \vec{A}a_1 \label{eq:eq6}
+\end{align}
+\begin{align*}
+& \vdots
+\end{align*}
+\begin{align}
 & \vec{A^{n}}b_{n-1} - \vec{A^{n-1}}b_{n-2} = a_{n-1}\vec{A^{n-1}} \label{eq:eq7}\\
 & -\vec{A^{n}}b_{n-1} = a_n\vec{A^{n}} \label{eq:eq8}
 \end{align}
-Adding all the equations above, we get:
+Adding the equations, we get:
 \begin{align}
 &\implies \boxed{a_0 + a_1\vec{A} + a_2\vec{A^{2}} +  \cdots+a_n\vec{A^{n}} = 0} \label{eq:final}
 \end{align}
