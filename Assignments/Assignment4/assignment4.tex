@@ -159,22 +159,13 @@ $\triangle = \mydet{b+c & c+a & a+b\\c+a & a+b & b+c\\a+b&b+c & c+a} =0$, \\Show
 \section{Explanation}
 Given,\\
 \begin{align}
-&\triangle = \mydet{b+c & c+a & a+b\\c+a & a+b & b+c\\a+b&b+c & c+a} =0\label{eq:ques}
-\end{align}
-let us perform column operation on equation \eqref{eq:ques}:\\
-$C_1 \rightarrow C_1+C_2+C_3$
-\begin{align}
-&\mydet{2(a+b+c) & c+a & a+b\\2(a+b+c) & a+b & b+c\\2(a+b+c)&b+c & c+a} =0 \label{eq:eq_1}
-\end{align}
-Taking 2$(a+b+c)$ common from $C_1$ in \eqref{eq:eq_1},\\
-\begin{align}
-&2(a+b+c)\mydet{1 & c+a & a+b\\1 & a+b & b+c\\1&b+c & c+a} =0 \label{eq:eq_2}
-\end{align}
-Let us  perform row operations on equation \eqref{eq:eq_2},
-$R_1 \rightarrow R_1-R_2, R_2 \rightarrow R_2-R_3$
-\begin{align}
+&\triangle = \mydet{b+c & c+a & a+b\\c+a & a+b & b+c\\a+b&b+c & c+a} \label{eq:ques}\\
+\xleftrightarrow[]{C_1\leftarrow C_1+C_2+C_3}
+&\mydet{2(a+b+c) & c+a & a+b\\2(a+b+c) & a+b & b+c\\2(a+b+c)&b+c & c+a} \label{eq:eq_1}\\
+&=2(a+b+c)\mydet{1 & c+a & a+b\\1 & a+b & b+c\\1&b+c & c+a} \label{eq:eq_2}\\
+\xleftrightarrow[]{R_1\leftarrow R_1-R_2; R_2 \leftarrow R_2-R_3}
 &2(a+b+c)\mydet{0 & c-b & a-c\\0 & a-c & b-a\\1&b+c & c+a} =0 \label{eq:equ_3}
-\end{align}\\
+\end{align}
 On expanding determinant along first column from equation \eqref{eq:equ_3},
 \begin{align}
 &2(a+b+c)[(c-b)(b-a)-(a-c)^{2}]=0\\
