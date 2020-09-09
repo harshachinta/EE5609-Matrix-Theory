@@ -3,7 +3,6 @@
 \usepackage{tikz,pgf} %and any other packages or tikzlibraries your picture needs
 
 \begin{document}
-\resizebox{1cm}{!}{
 \begin{tikzpicture}
 \draw (0,0) node[anchor=north]{$B$}
   -- (4,8) node[anchor=west]{$A$}
@@ -13,23 +12,4 @@
   -- (2,4) node[anchor=east]{$D$}
   -- cycle;
 \end{tikzpicture}
-\begin{tikzpicture}
-\draw (0,0) node[anchor=north]{$B$}
-  -- (4,8) node[anchor=west]{$A$}
-  -- (8,0) node[anchor=north]{$C$}
-  -- cycle;
-\draw (4,0) node[anchor=north]{$E$}
-  -- (2,4) node[anchor=east]{$D$}
-  -- cycle;
-\end{tikzpicture}
-\begin{tikzpicture}
-\draw (0,0) node[anchor=north]{$B$}
-  -- (4,8) node[anchor=west]{$A$}
-  -- (8,0) node[anchor=north]{$C$}
-  -- cycle;
-\draw (6,4) node[anchor=west]{$F$}
-  -- (4,0) node[anchor=north]{$E$}
-  -- cycle;
-\end{tikzpicture}
-}
 \end{document}
