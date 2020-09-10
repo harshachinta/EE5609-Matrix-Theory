@@ -274,36 +274,30 @@ Let us consider a line-segment joining the points $\vec{D}$ and $\vec{F}$ which 
 As $\vec{D}$ is midpoint of line AB, $\vec{E}$ is midpoint of line BC and $\vec{F}$ is midpoint of line CA, they can be written as follows:
 \begin{align}
     \vec{D}&=\frac{A+B}{2} \label{eq:mid_1}\\
-    \vec{E}&=\frac{B+C}{2} \label{eq:mid_2}\\
     \vec{F}&=\frac{C+A}{2} \label{eq:mid_3}
 \end{align}
 The line DF can be written in the form of direction vector as,
-\begin{align}
-    \vec{m}_{DF}&=\vec{D}-\vec{F} \label{eq:dir_1}
-\end{align}
-
-
-Substituting equation \eqref{eq:mid_1} and \eqref{eq:mid_3} in \eqref{eq:dir_1} we get,
-\begin{align}
-    \vec{m}_{DF}&=\frac{A+B}{2}-\frac{C+A}{2}\\
-    \vec{m}_{DF}&=\frac{\vec{B}-\vec{C}}{2}  \label{eq:equa_1}\\
-    \vec{m}_{DF}&=\frac{\vec{m}_{BC}}{2} \label{eq:res_1}
-\end{align}
+\begin{equation} \label{eq1}
+\begin{split}
+\vec{m}_{DF}&=\vec{D}-\vec{F} \label{eq:res_1}\\
+ &=\frac{A+B}{2}-\frac{C+A}{2}\\
+ &=\frac{\vec{B}-\vec{C}}{2} \\
+ &=\frac{\vec{m}_{BC}}{2}
+\end{split}
+\end{equation}
 where $\vec{m}_{BC}$ is the direction vector of line BC.\\
-From equation \eqref{eq:res_1} we can say that the direction vectors $\vec{m}_{DF}$ and $\vec{m}_{BC}$ are in same direction. Thus, line-segment DF joining the mid-points of two sides (AB and AC) of triangle is parallel to the third side (BC) of the triangle.\\
-From equation \eqref{eq:equa_1} we can say that,
+Consider equation \eqref{eq:res_1},
 \begin{align}
-    \vec{m}_{DF}&=\frac{\vec{B}-\vec{C}}{2}\\
     \implies \vec{D}-\vec{F}&=\frac{\vec{B}-\vec{C}}{2}\label{eq:equa_2}
 \end{align}
 Applying norm on both sides of equation \eqref{eq:equa_2}, we get
 \begin{align}
     \norm{\vec{D}-\vec{F}} = \frac{1}{2}\norm{\vec{B}-\vec{C}}\label{eq:res_2}
-\end{align}
-From equation \eqref{eq:res_2}, the line-segment DF is equal to half of line BC. 
+\end{align}\\
+From equation\eqref{eq:res_1}, $\vec{DF}\parallel\vec{BC}$ and from \eqref{eq:res_2}, the line-segment $\vec{DF}=\frac{1}{2}\vec{BC}$
 
 \section{Solution}
 
-From equations \eqref{eq:res_1} and \eqref{eq:res_2}, we can say that the line-segment joining the mid-points of any two sides of a triangle is parallel to the third side and is half of it
+From equation\eqref{eq:res_1}, $\vec{DF}\parallel\vec{BC}$ and from \eqref{eq:res_2}, the line-segment $\vec{DF}=\frac{1}{2}\vec{BC}$
 
 \\\end{document}
