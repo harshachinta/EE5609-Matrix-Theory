@@ -194,15 +194,34 @@ Sub $h=\frac{17}{2}}$ in equation \eqref{eq:question} we get,
 \begin{align}
 6x^2+17xy+12y^2+22x+31y+20=0 \label{eq:op1}
 \end{align}
-Rearranging equation \eqref{eq:op1},
+From equation \eqref{eq:op1} consider,
+\begin{align}
+6x^2+17xy+12y^2\\
+\implies 6x^2+8xy+9xy+12y^2\\
+\implies 2x(3x+4y)+3y(3x+4y)\\
+\implies (2x+3y)(3x+4y) \label{eq:test1}
+\end{align}
+Equation \eqref{eq:test1} can be modified as,
 \begin{multline}
-\implies 6x^2+8xy+10x+
-9xy+12y^2+15y+\\
-12x+16y+20=0\\
-\implies 2x(3x+4y+5)+3y(3x+4y+5)\\
-+4(3x+4y+5) = 0\\
+\implies (2x+3y+l)(3x+4y+m)=0\\
+\implies 6x^2+17xy+12y^2+(2m+3l)x+\\
+(3m+4l)y+lm=0 \label{eq:test2}
+\end{multline}
+Comparing equations \eqref{eq:op1} and \eqref{eq:test2},
+\begin{align*}
+    2m+3l=22\\
+3m+4l=31
+\end{align*}
+Solving the two equations we get,
+\begin{align}
+    l=4 \label{eq:test3} \\
+    m=5 \label{eq:test4}
+\end{align}
+Substituting equations \eqref{eq:test3} and \eqref{eq:test4} in \eqref{eq:test2},
+\begin{multline}
 \implies \boxed{(2x+3y+4)(3x+4y+5) = 0} \label{eq:line1}
 \end{multline}
+Equation \eqref{eq:line1} represents equations of two straight lines.
 \renewcommand{\thefigure}{\arabic{figure}}
 \begin{figure}[h!]
 	\centering
@@ -215,15 +234,35 @@ Similarly, Sub $h=\frac{171}{20}}$ in equation \eqref{eq:question} we get,
 \begin{align}
 20x^2+57xy+40y^2+\frac{220}{3}x+\frac{310}{3}y+\frac{200}{3}=0 \label{eq:op2}
 \end{align}
-Rearranging equation \eqref{eq:op2},
+
+From equation \eqref{eq:op2} consider,
+\begin{align}
+20x^2+57xy+40y^2\\
+\implies 20x^2+32xy+25xy+40y^2\\
+\implies 4x(5x+8y)+5y(5x+8y)\\
+\implies (4x+5y)(5x+8y) \label{eq:test10}
+\end{align}
+Equation \eqref{eq:test10} can be modified as,
 \begin{multline}
-\implies 20x^2+32xy+40x+
-25xy+40y^2+50y+\\
-\frac{100}{3}x+\frac{160}{3}y+\frac{200}{3}=0\\
-\implies 4x(5x+8y+10)+5y(5x+8y+10)\\
-+\frac{20}{3}(5x+8y+10) = 0\\
+\implies (4x+5y+l)(5x+8y+m)=0\\
+\implies 20x^2+57xy+40y^2+(4m+5l)x+\\
+(5m+8l)y+lm=0 \label{eq:test11}
+\end{multline}
+Comparing equations \eqref{eq:op2} and \eqref{eq:test11},
+\begin{align*}
+    4m+5l=\frac{220}{3}\\
+5m+8l=\frac{310}{3}
+\end{align*}
+Solving the two equations we get,
+\begin{align}
+    l=\frac{20}{3} \label{eq:test12} \\
+    m=10 \label{eq:test13}
+\end{align}
+Substituting equations \eqref{eq:test12} and \eqref{eq:test13} in \eqref{eq:test11},
+\begin{multline}
 \implies \boxed{(4x+5y+\frac{20}{3})(5x+8y+10) = 0} \label{eq:line2}
 \end{multline}
+Equation \eqref{eq:line2} represents equations of two straight lines.
 \renewcommand{\thefigure}{\arabic{figure}}
 \begin{figure}[h!]
 	\centering
