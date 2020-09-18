@@ -217,6 +217,19 @@ Substituting \eqref{eq:op1} in the equation \eqref{eq:quadr111},
     & \vec{m_1}=\myvec{3\\ -2}, \vec{m_2}=\myvec{4\\ -3}\\
     &\implies \vec{n_1}=\myvec{-2\\ -3}, \vec{n_2}=\myvec{-3\\ -4} \label{eq:normal1}
 \end{align}
+we know that, 
+\begin{align}
+\vec{n_1}\ast \vec{n_2} = \myvec{a\\2b\\c} \label{eq:conv1}
+\end{align}
+Convolution of $\vec{n_1}$ and $\vec{n_2}$ can be done by converting $\vec{n_1}$ into a toeplitz matrix and multiplying with $\vec{n_2}$\\
+From equation \eqref{eq:normal1}
+\begin{align}
+    \vec{n_1}=\myvec{-2&0\\-3&-2\\0&-3}
+    \vec{n_2}=\myvec{-3\\ -4}\label{eq:conv2}\\
+\implies \myvec{-2&0\\-3&-2\\0&-3}\myvec{-3\\ -4} = \myvec{6\\17\\12} = \myvec{a\\2b\\c}\label{eq:conv3}
+\end{align}
+$\implies$ Equation \eqref{eq:normal1} satisfies \eqref{eq:conv1}\\
+
 $c_1$ and $c_2$ can be obtained as,
 \begin{align}
 \myvec{\vec{n_1} & \vec{n_2}}\myvec{c_2\\c_1}&=-2\vec{u} \label{eq:aug1}
@@ -272,6 +285,15 @@ Substituting \eqref{eq:op2} in the equation \eqref{eq:quadr111},
     & \vec{m_1}=\myvec{8\\ -5}, \vec{m_2}=\myvec{5\\ -4}\\
     &\implies \vec{n_1}=\myvec{-5\\ -8}, \vec{n_2}=\myvec{-4\\ -5} \label{eq:normal11}
 \end{align}
+Convolution of $\vec{n_1}$ and $\vec{n_2}$ can be done by converting $\vec{n_1}$ into a toeplitz matrix and multiplying with $\vec{n_2}$\\
+From equation \eqref{eq:normal11}
+\begin{align}
+    \vec{n_1}=\myvec{-5&0\\-8&-5\\0&-8}
+    \vec{n_2}=\myvec{-4\\ -5}\label{eq:conv21}\\
+\implies \myvec{-5&0\\-8&-5\\0&-8}\myvec{-4\\ -5} = \myvec{20\\57\\40} = \myvec{a\\2b\\c}\label{eq:conv31}
+\end{align}
+$\implies$ Equation \eqref{eq:normal11} satisfies \eqref{eq:conv1}\\
+
 $c_1$ and $c_2$ can be obtained as,
 \begin{align}
 \myvec{\vec{n_1} & \vec{n_2}}\myvec{c_2\\c_1}&=-2\vec{u} \label{eq:aug11}
