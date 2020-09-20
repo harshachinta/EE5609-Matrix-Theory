@@ -187,7 +187,37 @@ Using equation \eqref{eq:eq3} and \eqref{eq:eq5},the area of the sector is obtai
 	\caption{Region enclosed by $x$-axis, line and circle}
 	\label{myfig}
 \end{figure}\\
-\\
+To find points $\vec{A}$ and $\vec{B}$,\\
+The parametric form of $x$-axis is,
+\begin{align}
+    \vec{B} = \vec{q}+\lambda\vec{m}\\
+=\myvec{0\\0}+\lambda\myvec{1\\0} \label{eq:eq7}
+\end{align}
+From the intersection of circle and line, the value of $\lambda$ can be found by,
+\begin{align}
+    \lambda^2 = \frac{-f_1-\norm{\vec{q}}^2}{\norm{\vec{m}}^2}\\
+                = \frac{4-0}{1} = 4\\
+    \implies \lambda = \pm{2} \label{eq:eq8}
+\end{align}
+Sub equation \eqref{eq:eq8} in \eqref{eq:eq7},
+\begin{align}
+    \vec{B} = \myvec{2\\0}\quad \vec{B} = \myvec{-2\\0} \label{eq:eq9}
+\end{align}
+As given in question as first quadrant,
+\begin{align}
+    \implies \boxed{\vec{B} = \myvec{2\\0}} \label{eq:eq10}
+\end{align}
+Similarly, to find point $\vec{A}$,
+The parametric form of line is,
+\begin{align}
+    \vec{A} = \vec{q}+\lambda\vec{m}\\
+            = \myvec{0\\0}+\lambda\myvec{\sqrt{3}\\1}\\
+    \lambda^2 = \frac{-f_1-\norm{\vec{q}}^2}{\norm{\vec{m}}^2}\\
+                = \frac{4-0}{4} = 1\\
+    \implies \lambda = \pm{1} \label{eq:eq11}\\
+    \vec{A} = \myvec{\sqrt{3}\\1}\quad \vec{A} = \myvec{-\sqrt{3}\\-1}\label{eq:eq12}\\
+\implies\boxed{\vec{A}=\myvec{\sqrt{3}\\1}}
+\end{align}
 \section{Solution}
 The area of the region is $\frac{\pi}{3}$.
 \\\end{document}
