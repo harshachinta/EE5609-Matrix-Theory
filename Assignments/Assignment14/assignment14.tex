@@ -1,0 +1,229 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 14}
+\author{Sri Harsha CH}
+
+\maketitle
+\newpage
+
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document explains the conditions to check for a sub space. 
+\end{abstract}
+
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/harshachinta/EE5609-Matrix-Theory/tree/master/Assignments/Assignment14/code
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/harshachinta/EE5609-Matrix-Theory/tree/master/Assignments/Assignment14
+\end{lstlisting}
+%
+\section{Problem}
+Let $\vec{V}$ be the  vector space of all functions from $\vec{R}$ into $\vec{R}$; let $\vec{V_e}$ be the subset of even functions, $f(-x) = f(x)$; let $\vec{V_o}$ be the subset of odd functions, $f(-x) = -f(x)$.
+\begin{enumerate}
+   \item Prove that $\vec{V_e}$ and $\vec{V_o}$ are subspaces of $\vec{V}$
+   \item Prove that $\vec{V_e} + \vec{V_o} = \vec{V}$
+    \item Prove that $\vec{V_e} \cap \vec{V_o} = \{0\}$
+ \end{enumerate}
+\section{Explanation}
+ \begin{enumerate}
+   \item Prove that $\vec{V_e}$ and $\vec{V_o}$ are subspaces of $\vec{V}$.
+ \end{enumerate}
+
+A non-empty subset $\vec{W}$ of $\vec{V}$ is a subspace of $\vec{V}$ if and only if for each pair of vectors $\vec{\alpha}$, $\vec{\beta}$ in $\vec{W}$ and each scalar $c$ in $\vec{F}$ the vector $c\vec{\alpha}+\vec{\beta}$ is again in $\vec{W}$.\\
+
+Let $\vec{u}$, $\vec{v}$ $\in$ $\vec{V_e}$ and $c$ $\in$ $\vec{R}$ and let $\vec{h}$ = $c\vec{u}$ + $\vec{v}$. Then,
+\begin{equation} \label{eq:eq1}
+\begin{split}
+\vec{h}(-x) &= c \vec{u}(-x) + \vec{v}(-x)\\
+ & = c \vec{u}(x) + \vec{v}(x)\\
+& = \vec{h}(x)\\
+\end{split}
+\end{equation}
+From \eqref{eq:eq1}
+\begin{align}
+\implies \vec{h}(-x) = \vec{h}(x)\\
+\implies \vec{h} \in \vec{V_e} \label{eq:eq2}
+\end{align}
+
+Let $\vec{u}$, $\vec{v}$ $\in$ $\vec{V_o}$ and $c$ $\in$ $\vec{R}$ and let $\vec{h}$ = $c\vec{u}$ + $\vec{v}$. Then,
+\begin{equation} \label{eq:eq3}
+\begin{split}
+\vec{h}(-x) &= c \vec{u}(-x) + \vec{v}(-x)\\
+ & = -c \vec{u}(x) - \vec{v}(x)\\
+& = -\vec{h}(x)\\
+\end{split}
+\end{equation}
+From \eqref{eq:eq3}
+\begin{align}
+\implies \vec{h}(-x) = -\vec{h}(x)\\
+\implies \vec{h} \in \vec{V_o} \label{eq:eq4}
+\end{align}
+From \eqref{eq:eq2} and \eqref{eq:eq4}, $\vec{V_e}$ and $\vec{V_o}$ are subspaces of $\vec{V}$.\\
+\begin{enumerate}
+    \setcounter{enumi}{1}
+   \item Prove that $\vec{V_e} + \vec{V_o} = \vec{V}$.
+ \end{enumerate}
+Let $\vec{u}$ $\in$ $\vec{V}$
+\begin{align}
+    \vec{u_e}(x) = \frac{\vec{u}(x)+\vec{u}(-x)}{2} \label{eq:eq10}\\
+    \vec{u_o}(x) = \frac{\vec{u}(x)-\vec{u}(-x)}{2} \label{eq:eq11}
+\end{align}
+Equation equation \eqref{eq:eq10} and \eqref{eq:eq11}, $\vec{u_e}$ is even and $\vec{u_o}$ is odd. Adding both the equations,
+\begin{align}
+    \vec{u} = \vec{u_e} + \vec{u_o} \label{eq:eq12}
+\end{align}
+
+\begin{enumerate}
+    \setcounter{enumi}{2}
+   \item Prove that $\vec{V_e} \cap \vec{V_o} = \{0\}$.
+ \end{enumerate}
+Let $\vec{u} \in \vec{V_e} \cap \vec{V_o}$
+\begin{align}
+    \vec{u} \in \vec{V_e} \implies \vec{u}(-x) &= \vec{u}(x) \label{eq:eq7}\\
+    \vec{u} \in \vec{V_o} \implies \vec{u}(-x) &= -\vec{u}(x) \label{eq:eq8}
+\end{align}
+Equating \eqref{eq:eq7} and \eqref{eq:eq8},
+\begin{align}
+    \vec{u}(x) = -\vec{u}(x)\\
+    \implies 2\vec{u}(x)=0\\
+    \implies \vec{u}=0 \label{eq:eq13}
+\end{align}
+\section{Solution}
+Equations \eqref{eq:eq2}, \eqref{eq:eq4}, \eqref{eq:eq12}, \eqref{eq:eq13} proves 1, 2 and 3.
+\\\end{document}
