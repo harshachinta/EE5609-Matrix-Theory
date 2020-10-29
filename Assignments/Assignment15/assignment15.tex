@@ -181,12 +181,21 @@ Let us consider basis of $\mathbb{R}^2$ $\{(1,0), (0,1)\}$ and apply linear tran
     \vec{T}(1,0) = (0, 0)\\
     \vec{T}(0,1) = (1, 0)
 \end{align}
-From equation \eqref{eq:eq5},
+From \eqref{eq:eq5},\\
+The range of matrix can be found from row reduced echelon form. But as matrix $\vec{M}$ is in RREF form,\\
+the basis for range is given by $\myvec{1\\0}$.\\
+The null space of matrix is,
+\begin{align}
+    \myvec{0&1\\0&0}\myvec{x_1\\x_2} = \myvec{0\\0}\\
+\implies x_1 = t \quad x_2 = 0\\
+\implies \vec{X} = \myvec{t\\0} = t\myvec{1\\0}
+\end{align}
+The basis for null space is $\myvec{1\\0}$.
 \begin{align}
     \rank(\vec{T}) &= 1 \quad \nullity(\vec{T}) = 1 \label{eq:eq6}\\
     \dim(\vec{V}) &= 2 \label{eq:eq7}
 \end{align}
-From equation \eqref{eq:eq6} and \eqref{eq:eq7}, the range and null space of $\vec{T}$ are equal, and $n$ is even. 
+Thus the range and null space are equal, and $n$ is even. 
 \section{Solution}
-From equation \eqref{eq:eq6} and \eqref{eq:eq7}, the range and null space of $\vec{T}$ are equal, and $n$ is even.
+The range and null space of $\vec{T}$ are equal, and $n$ is even.
 \\\end{document}
