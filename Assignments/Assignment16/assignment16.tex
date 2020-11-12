@@ -160,28 +160,70 @@ If $\vec{V}$ and $\vec{W}$ are vector spaces over the field $\vec{F}$, any one t
 
 Let T : $\vec{V}$ $\xrightarrow{}$ $\vec{W}$ be an isomorphism and let $\{\vec{v_1}, \vec{v_2},\cdots,\vec{v_n}\}$ be a basis for $\vec{V}$. Since it is isomorphic we know that T is one to one and onto. We need to show that  $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ is a basis for $\vec{W}$ so that $\dim{\vec{V}}$ = n = $\dim{\vec{W}}$.\\
 
-1. To see that if set of vectors in $\vec{W}$ are linearly independent we use the property that T is one to one. Let us consider a linear combination.
-\begin{align}
+
+
+
+
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|c|}{$\vec{V} = \{\vec{v_1}, \vec{v_2},\cdots,\vec{v_n}\}$ \quad $\vec{W} = \{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$}\\[1ex]
+\hline
+\textbf{Property Used} & \textbf{Derivation} \\[0.5ex]
+\hline
+\text{T is one-one} & 
+\text{Linear combination of vectors in $\vec{W}$}\\
+& \parbox{10cm}{\begin{align}
     \alpha_1T(\vec{v_1})+\alpha_2T(\vec{v_2})+\cdots+\alpha_nT(\vec{v_n}) = \vec{0}\label{eq:eq1}\\
-    T(\alpha_1\vec{v_1})+T(\alpha_2\vec{v_2})+\cdots+T(\alpha_n\vec{v_n}) = \vec{0}\\
+    T(\alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n}) = \vec{0}\\
     \implies \alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n} = \vec{0}\\
     \implies \alpha_1=\alpha_2=\cdots=\alpha_n=0 \label{eq:eq2}
-\end{align}
-From equation \eqref{eq:eq1} and \eqref{eq:eq2}, the set of vectors $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ are linearly independent.
-\\
-
-2. To check if the set of vectors span $\vec{W}$. Since T is onto, for any $\vec{y} \in \vec{W}$ there exists an $\vec{x} \in \vec{V}$ such that $T(\vec{x}) = \vec{y}$.
-\begin{align}
+\end{align}} \\
+& From equation \eqref{eq:eq1} and \eqref{eq:eq2}, the set of vectors $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ \\ &are linearly independent
+\\ [0.5ex] 
+\hline
+\text{T is onto} & 
+\text{For any $\vec{y} \in \vec{W}$ there exists an $\vec{x} \in \vec{V}$ such that $T(\vec{x}) = \vec{y}$.}\\
+& \parbox{10cm}{\begin{align}
     \vec{x} = \alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n}\\
     T(\vec{x}) = T(\alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n}) = \vec{y}\\
     \alpha_1T(\vec{v_1})+\alpha_2T(\vec{v_2})+\cdots+\alpha_nT(\vec{v_n}) = \vec{y} \label{eq:eq3}
-\end{align}
-From equation \eqref{eq:eq3}, any vector in $\vec{W}$ can be represented as linear combination of $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$.
-\\
+\end{align}} \\
+& From equation \eqref{eq:eq3}, any vector in $\vec{W}$ can be represented as linear combination\\ & of $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$. That is it spans $\vec{W}$.
+\\ [0.5ex] 
+\hline
+\end{tabular}
+\caption{Derivation}
+\label{table:1}
+\end{center}
+\vspace{-0.5cm}
+\end{table*}
 
-Therefore from equation \eqref{eq:eq2} and \eqref{eq:eq3}, $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ are linearly independent and span $\vec{W}$.\\
+
+
+
+
+
+
+Therefore from equation \eqref{eq:eq2} and \eqref{eq:eq3} in Table \ref{table:1}, $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ are linearly independent and span $\vec{W}$.\\
 
 $\implies \dim{\vec{W}}$ = n = $\dim{\vec{V}}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Solution}
 $\vec{V}$ and $\vec{W}$ are isomorphic if and only if $\dim{\vec{V}}$ = $\dim{\vec{W}}$
 \\\end{document}
