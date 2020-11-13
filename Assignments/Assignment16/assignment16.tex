@@ -176,9 +176,9 @@ Let T : $\vec{V}$ $\xrightarrow{}$ $\vec{W}$ be an isomorphism and let $\{\vec{v
 \text{T is one-one} & 
 \text{Linear combination of vectors in $\vec{W}$}\\
 & \parbox{10cm}{\begin{align}
-    \alpha_1T(\vec{v_1})+\alpha_2T(\vec{v_2})+\cdots+\alpha_nT(\vec{v_n}) = \vec{0}\label{eq:eq1}\\
-    T(\alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n}) = \vec{0}\\
-    \implies \alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n} = \vec{0}\\
+    \sum_{k=1}^{n} \alpha_kT(\vec{v_k}) = \vec{0} \label{eq:eq1}\\
+    \sum_{k=1}^{n} T(\alpha_k\vec{v_k}) = \vec{0}\\
+    \implies \sum_{k=1}^{n} \alpha_k\vec{v_k} = \vec{0}\\
     \implies \alpha_1=\alpha_2=\cdots=\alpha_n=0 \label{eq:eq2}
 \end{align}} \\
 & From equation \eqref{eq:eq1} and \eqref{eq:eq2}, the set of vectors $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ \\ &are linearly independent
@@ -187,9 +187,9 @@ Let T : $\vec{V}$ $\xrightarrow{}$ $\vec{W}$ be an isomorphism and let $\{\vec{v
 \text{T is onto} & 
 \text{For any $\vec{y} \in \vec{W}$ there exists an $\vec{x} \in \vec{V}$ such that $T(\vec{x}) = \vec{y}$.}\\
 & \parbox{10cm}{\begin{align}
-    \vec{x} = \alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n}\\
-    T(\vec{x}) = T(\alpha_1\vec{v_1}+\alpha_2\vec{v_2}+\cdots+\alpha_n\vec{v_n}) = \vec{y}\\
-    \alpha_1T(\vec{v_1})+\alpha_2T(\vec{v_2})+\cdots+\alpha_nT(\vec{v_n}) = \vec{y} \label{eq:eq3}
+    \vec{x} = \sum_{k=1}^{n} \alpha_k\vec{v_k}\\
+    T(\vec{x}) = T(\sum_{k=1}^{n} \alpha_k\vec{v_k} ) = \vec{y}\\
+    \sum_{k=1}^{n} \alpha_kT(\vec{v_k}) = \vec{y} \label{eq:eq3}
 \end{align}} \\
 & From equation \eqref{eq:eq3}, any vector in $\vec{W}$ can be represented as linear combination\\ & of $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$. That is it spans $\vec{W}$.
 \\ [0.5ex] 
