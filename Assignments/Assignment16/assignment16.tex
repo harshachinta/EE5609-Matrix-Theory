@@ -156,11 +156,7 @@ https://github.com/harshachinta/EE5609-Matrix-Theory/tree/master/Assignments/Ass
 \section{Problem}
 Let $\vec{V}$ and $\vec{W}$ be finite-dimensional vector spaces over the field $\vec{F}$. Prove that $\vec{V}$ and $\vec{W}$ are isomorphic if and only if $\dim{\vec{V}}$ = $\dim{\vec{W}}$
 \section{Explanation}
-If $\vec{V}$ and $\vec{W}$ are vector spaces over the field $\vec{F}$, any one to one linear transformation T of $\vec{V}$ onto $\vec{W}$ is called an isomorphism of $\vec{V}$ onto $\vec{W}$.\\
-
-Let T : $\vec{V}$ $\xrightarrow{}$ $\vec{W}$ be an isomorphism and let $\{\vec{v_1}, \vec{v_2},\cdots,\vec{v_n}\}$ be a basis for $\vec{V}$. Since it is isomorphic we know that T is one to one and onto. We need to show that  $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ is a basis for $\vec{W}$ so that $\dim{\vec{V}}$ = n = $\dim{\vec{W}}$.\\
-
-
+Refer Table \ref{table:1}.
 
 
 
@@ -169,7 +165,8 @@ Let T : $\vec{V}$ $\xrightarrow{}$ $\vec{W}$ be an isomorphism and let $\{\vec{v
 \begin{center}
 \begin{tabular}{|l|l|}
 \hline
-\multicolumn{2}{|c|}{$\vec{V} = \{\vec{v_1}, \vec{v_2},\cdots,\vec{v_n}\}$ \quad $\vec{W} = \{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$}\\[1ex]
+\multicolumn{2}{|c|}{
+T : $\vec{V}$ $\xrightarrow{}$ $\vec{W}$ \quad $\vec{V} = \{\vec{v_1}, \vec{v_2},\cdots,\vec{v_n}\}$ \quad $\vec{W} = \{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$}\\[1ex]
 \hline
 \textbf{Property Used} & \textbf{Derivation} \\[0.5ex]
 \hline
@@ -207,9 +204,7 @@ Let T : $\vec{V}$ $\xrightarrow{}$ $\vec{W}$ be an isomorphism and let $\{\vec{v
 
 
 
-Therefore from equation \eqref{eq:eq2} and \eqref{eq:eq3} in Table \ref{table:1}, $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ are linearly independent and span $\vec{W}$.\\
 
-$\implies \dim{\vec{W}}$ = n = $\dim{\vec{V}}$
 
 
 
@@ -225,5 +220,9 @@ $\implies \dim{\vec{W}}$ = n = $\dim{\vec{V}}$
 
 
 \section{Solution}
+Therefore from equation \eqref{eq:eq2} and \eqref{eq:eq3} in Table \ref{table:1}, $\{T(\vec{v_1}), T(\vec{v_2}),\cdots,T(\vec{v_n})\}$ are linearly independent and span $\vec{W}$.\\
+
+$\implies \dim{\vec{W}}$ = n = $\dim{\vec{V}}$\\
+
 $\vec{V}$ and $\vec{W}$ are isomorphic if and only if $\dim{\vec{V}}$ = $\dim{\vec{W}}$
 \\\end{document}
