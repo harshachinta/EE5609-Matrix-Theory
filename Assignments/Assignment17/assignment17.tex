@@ -165,20 +165,29 @@ Refer Table \ref{table:1}.
 \begin{center}
 \begin{tabular}{|l|l|}
 \hline
+\multicolumn{2}{|c|}{
+Let $\{\vec{\alpha_1}, \vec{\alpha_2}, \cdots, \vec{\alpha_n}\}$ be an ordered basis of $\vec{F^n}$}\\[1ex]
+\hline
 \textbf{Given} & \textbf{Explanation} \\[0.5ex]
 \hline
 \text{T is a linear operator $\vec{F^n}$} & 
-\text{Let $\{\vec{\alpha_1}, \vec{\alpha_2}, \cdots, \vec{\alpha_n}\}$ be an ordered basis of $\vec{F^n}$. As T is linear,}\\
+\text{As T is linear,}\\
 & \parbox{10cm}{\begin{align}
     &T(\vec{x}) = \vec{Ax}\\
     &\vec{A} = \myvec{T\vec{\epsilon_1}&T\vec{\epsilon_2}&\cdots&T\vec{\epsilon_n}} \label{eq:eq1}
 \end{align}} \\
-& From equation \eqref{eq:eq1}, columns of $\vec{A}$ are the images of the standard basis \\ &elements of $\vec{F^n}$.\\
-& \parbox{10cm}{\begin{align}
+& From equation \eqref{eq:eq1}, columns of $\vec{A}$ are the images of the standard basis \\ &elements of $\vec{F^n}$.
+\\ [0.5ex]
+\hline
+\text{Range of T} & 
+ \parbox{10cm}{\begin{align}
     \range(T) = \{T\vec{\epsilon_1}, T\vec{\epsilon_2}, \cdots, T\vec{\epsilon_n}\} \label{eq:eq2}
 \end{align}} \\
-& From equation \eqref{eq:eq1} and \eqref{eq:eq2}, columns of $\vec{A}$ generate the range of T.\\
-&Since any generating set contains a basis for the generated space, \\&we can say that the columns of $\vec{A}$ contains a basis of the range of T.
+& From equation \eqref{eq:eq1} and \eqref{eq:eq2}, columns of $\vec{A}$ generate the range of T.
+\\ [0.5ex]
+\hline
+\text{} & 
+Since any generating set contains a basis for the generated space, \\&we can say that the columns of $\vec{A}$ contains a basis of the range of T.
 \\ [0.5ex]
 \hline
 \end{tabular}
