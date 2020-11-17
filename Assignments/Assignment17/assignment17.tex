@@ -46,6 +46,7 @@
 \usepackage{chngcntr}
 
 \DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator{\range}{range}
 
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
@@ -157,9 +158,33 @@ https://github.com/harshachinta/EE5609-Matrix-Theory/tree/master/Assignments/Ass
 Let T be a linear operator on $\vec{F^n}$, let $\vec{A}$ be the matrix of T in the standard ordered basis for $\vec{F^n}$, and let W be the subspace of $\vec{F^n}$ spanned by the column vectors of $\vec{A}$. What does W have to do with T ?
 
 \section{Explanation}
-Let $\{\vec{\alpha_1}, \vec{\alpha_2}, \cdots, \vec{\alpha_n}\}$ be an ordered basis of $\vec{F^n}$.\\
-$\vec{A}$ is a matrix of T in the standard ordered basis. We know that the $i^{th}$ column of matrix $\vec{A}$ is given by $T\epsilon_i$, hence columns of $\vec{A}$ are the images of the standard basis elements of $\vec{F^n}$.\\
+Refer Table \ref{table:1}.
 
-We know that $\{T\vec{\epsilon_1}, T\vec{\epsilon_2}, \cdots, T\vec{\epsilon_n}\}$ generate the range of T. Hence the columns of matrix $\vec{A}$ generate the range of T.\\
-Since any generating set contains a basis for the generated space, we can say that the columns of $\vec{A}$ contains a basis of the range of T.
-\\\end{document}
+
+\begin{table*}[ht!]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Given} & \textbf{Explanation} \\[0.5ex]
+\hline
+\text{T is a linear operator $\vec{F^n}$} & 
+\text{Let $\{\vec{\alpha_1}, \vec{\alpha_2}, \cdots, \vec{\alpha_n}\}$ be an ordered basis of $\vec{F^n}$. As T is linear,}\\
+& \parbox{10cm}{\begin{align}
+    &T(\vec{x}) = \vec{Ax}\\
+    &\vec{A} = \myvec{T\vec{\epsilon_1}&T\vec{\epsilon_2}&\cdots&T\vec{\epsilon_n}} \label{eq:eq1}
+\end{align}} \\
+& From equation \eqref{eq:eq1}, columns of $\vec{A}$ are the images of the standard basis \\ &elements of $\vec{F^n}$.\\
+& \parbox{10cm}{\begin{align}
+    \range(T) = \{T\vec{\epsilon_1}, T\vec{\epsilon_2}, \cdots, T\vec{\epsilon_n}\} \label{eq:eq2}
+\end{align}} \\
+& From equation \eqref{eq:eq1} and \eqref{eq:eq2}, columns of $\vec{A}$ generate the range of T.\\
+&Since any generating set contains a basis for the generated space, \\&we can say that the columns of $\vec{A}$ contains a basis of the range of T.
+\\ [0.5ex]
+\hline
+\end{tabular}
+\caption{Expanation}
+\label{table:1}
+\end{center}
+\vspace{-0.5cm}
+\end{table*}
+\end{document}
