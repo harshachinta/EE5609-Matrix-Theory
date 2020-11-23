@@ -182,18 +182,19 @@ Refer Table \ref{table:1}.
 \\ [0.5ex]
 \hline
 \text{Eigenvalues of $\vec{AA^T}$} & 
-\text{$\vec{AA^T}$ is a $m \times m$ matrix. Given,}\\
+\text{$\vec{AA^T}$ is a $m \times m$ matrix and $\vec{A^TA}$ is a $n \times n$ matrix.}\\
+& Let, $\lambda$ be a non-zero eigen value of $\vec{A^TA}$.\\
 & \parbox{10cm}{\begin{align}
-    \vec{x^TAA^Tx} = \alpha\vec{x^Tx} \\
-    \vec{x^T(AA^T-\alpha I)x} = 0\\
-    \implies \vec{AA^T-\alpha I} = 0\\
-    \implies \vec{AA^T} = \alpha \vec{I}
+    \vec{A^TAv} = \lambda \vec{v} \quad \vec{v} \in \vec{R^n}\\
+    \vec{AA^TAv} = \lambda \vec{Av}\\
+    \text{Let,} \quad \vec{x} = \vec{Av} \quad \vec{x} \in \vec{R^m}\\
+    \vec{AA^Tx} = \lambda \vec{x}\\
+    \vec{x^TAA^Tx} = \lambda \vec{x^Tx}\\
+    \text{Given}, \quad \vec{x^TAA^Tx} = \alpha\vec{x^Tx}\\
+    \implies \alpha\vec{x^Tx} = \lambda \vec{x^Tx} \label{eq:eq18}
 \end{align}} \\
-& where $\vec{I}$ is a $m \times m$ identity matrix,\\
-& \parbox{10cm}{\begin{align}
-    \vec{AA^T} = \myvec{\alpha & 0 & 0 & \cdots & 0 \\ 0 & \alpha & 0 & \cdots & 0 \\ & & \vdots  & \\ 0&0&0&\cdots&\alpha}
-\end{align}}\\
-& $\vec{AA^T}$ has an eigenvalue $\alpha$ with multiplicity $m$.
+& From equation \eqref{eq:eq18}, $\lambda = \alpha$ as $\norm{\vec{x}} \not = 0$\\
+& $\vec{A^TA}$ has an eigenvalue $\alpha$ with multiplicity $m$.
 \\ [0.5ex]
 \hline
 \text{Eigenvalues of $\vec{A^TA}$} & 
